@@ -1,0 +1,12 @@
+{
+  "problems": [
+    "public class Main {\n    public static void main(String[] a) {\n       int x = 5;\n       if (x > 3) {\n           int y = x * 2;\n           System.out.println(\"A\");\n           for (int i = 1; i <= 3; i++) {\n               int z = y + i;\n               System.out.println(\"B\");\n               if (z % 2 == 0) {\n                   String m = \"C\";\n                   System.out.println(m);\n                   for (int j = 1; j <= 2; j++) {\n                       int w = z * j;\n                       System.out.println(w);\n                   }\n               }\n           }\n           System.out.println(x + y);\n       }\n   }\n}\n",
+    "public class Main {\n    public static void main(String[] a) {\n        int[] b1 = {1, 2, 3, 4, 5};\n        int[] b2 = new int[b1.length];\n        for (int i = 0; i < b1.length; i++) {\n            b2[i] = b1[i] * 2;\n            if (i % 2 == 0) {\n                b2[i] = b1[i] + 3;\n            } else {\n                b2[i] = b1[i] - 1;\n                for (int j = 0; j < b2.length; j++) {\n                    if (b2[j] > 0) {\n                        b2[j] += i;\n                    }\n                }\n            }\n        }\n        System.out.print(\"H: \");\n        for (int n : b1) {\n            System.out.print(n + \" \");\n        }\n        System.out.print(\"\\nI: \");\n        for (int n : b2) {\n            System.out.print(n + \" \");\n        }\n    }\n}",
+    "public class Main {\n    public static void main(String[] a) {\n        int b1 = 6;\n        int b = 4;\n        int c = 0;\n        if ((b1 > 5 && b > 2) || (b < 4 && b1 > 3 && (b1 + b) < 10)) {\n            c = b1 * 2;\n            while (c > 0) {\n                System.out.print(c + \" \");\n                c--;\n            }\n        } else if (b < 4 || (b1 > 3 && (b1 - b) > 1)) {\n            c = b * 3;\n            do {\n                System.out.print(c + \" \");\n                c--;\n            } while (c > 0);\n        } else {\n            c = b1 + b;\n        }\n        System.out.println(c);\n    }\n}"
+  ],
+  "solutions": [
+    "A\nB\nB\nC\n12\n24\nB\n15",
+    "H: 1 2 3 4 5 \nI: 8 5 9 6 8 ",
+    "\n12 11 10 9 8 7 6 5 4 3 2 1 0"
+  ]
+}
